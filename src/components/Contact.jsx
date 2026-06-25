@@ -22,8 +22,10 @@ const socials = [
   {
     icon: <FiMail size={20} />,
     label: "Email",
-    value: "tushar@example.com",
-    href: "mailto:tushar@example.com",
+    // value: "tushar@example.com",
+    // href: "mailto:tushar@example.com"0,
+    value: "tusharmendhule1@gmail.com",
+    href: "mailto:tusharmendhule1@gmail.com",
     color: "#3B82F6",
   },
 ];
@@ -34,15 +36,45 @@ const Contact = () => {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setStatus("sending");
+  //   // Simulate async send
+  //   await new Promise((r) => setTimeout(r, 1200));
+  //   setStatus("sent");
+  //   setForm({ name: "", email: "", message: "" });
+  //   setTimeout(() => setStatus("idle"), 4000);
+  // };
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("sending");
-    // Simulate async send
-    await new Promise((r) => setTimeout(r, 1200));
+  e.preventDefault();
+  setStatus("sending");
+
+  try {
+    await emailjs.send(
+      "service_hcl2avd",
+      "template_sspqaxn",
+      {
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+      },
+      "fyRvqshwRbg_G00gj"
+    );
+
     setStatus("sent");
-    setForm({ name: "", email: "", message: "" });
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    });
+
     setTimeout(() => setStatus("idle"), 4000);
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message.");
+    setStatus("idle");
+  }
+};
 
   return (
     <section id="contact" className="py-28 px-6">
