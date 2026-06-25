@@ -55,8 +55,8 @@ const Contact = () => {
       "service_hcl2avd",
       "template_sspqaxn",
       {
-        from_name: form.name,
-        from_email: form.email,
+        name: form.name,
+        email: form.email,
         message: form.message,
       },
       "fyRvqshwRbg_G00gj"
