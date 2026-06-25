@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail, FiMapPin, FiSend, FiCheck } from "react-icons/fi";
 import Reveal from "./Reveal";
+import emailjs from "@emailjs/browser";
 
 const socials = [
   {
