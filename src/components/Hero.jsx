@@ -123,12 +123,31 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
             >
-              <a href="#projects" className="btn-primary">
+              {/* <a href="#projects" className="btn-primary">
                 View Projects <FiArrowRight />
-              </a>
-              <a href="#contact" className="btn-ghost">
+              </a> */}
+              <button
+                onClick={() =>
+                document.getElementById("projects").scrollIntoView({
+                behavior: "smooth",
+              })
+              }
+              className="btn-primary"
+            >
+              View Projects
+            </button>
+              {/* <a href="#contact" className="btn-ghost">
                 <FiMail /> Contact Me
-              </a>
+              </a> */}
+              <button
+                onClick={() =>
+                document.getElementById("contact").scrollIntoView({
+                behavior: "smooth",
+                })
+                }
+              >
+              Contact
+            </button>
               <a
                 href="#"
                 className="btn-ghost"
