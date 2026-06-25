@@ -46,21 +46,56 @@ const Contact = () => {
   //   setForm({ name: "", email: "", message: "" });
   //   setTimeout(() => setStatus("idle"), 4000);
   // };
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setStatus("sending");
+
+//   try {
+//     await emailjs.send(
+//       "service_hcl2avd",
+//       "template_sspqaxn",
+//       {
+//         from_name: form.name,
+//         from_email: form.email,
+//         message: form.message,
+//       },
+//       "fyRvqshwRbg_G00gj"
+//     );
+
+//     setStatus("sent");
+//     setForm({
+//       name: "",
+//       email: "",
+//       message: "",
+//     });
+
+//     setTimeout(() => setStatus("idle"), 4000);
+//   } catch (error) {
+//     console.error(error);
+//     alert("Failed to send message.");
+//     setStatus("idle");
+//   }
+// };
+
   const handleSubmit = async (e) => {
   e.preventDefault();
   setStatus("sending");
 
+  console.log("Form Data:", form);
+
   try {
-    await emailjs.send(
-      "service_hcl2avd",
-      "template_sspqaxn",
+    const response = await emailjs.send(
+      "service_hcl2avd", // e.g. service_9ldmy57
+      "template_sspqaxn", // e.g. template_xxxxxx
       {
         from_name: form.name,
         from_email: form.email,
         message: form.message,
       },
-      "fyRvqshwRbg_G00gj"
+      "fyRvqshwRbg_G00gj" // e.g. abcdefghijklmnop
     );
+
+    console.log("SUCCESS!", response);
 
     setStatus("sent");
     setForm({
@@ -71,8 +106,12 @@ const Contact = () => {
 
     setTimeout(() => setStatus("idle"), 4000);
   } catch (error) {
-    console.error(error);
-    alert("Failed to send message.");
+    console.error("EmailJS Error:", error);
+
+    alert(
+      error?.text || "Failed to send message. Check the browser console."
+    );
+
     setStatus("idle");
   }
 };
