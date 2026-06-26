@@ -26,8 +26,8 @@ const projects = [
     description:
       "My first developer portfolio — a single-page application showcasing projects, skills, and experience with smooth scroll animations.",
     tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    github: "https://github.com/tusharmendhule",
-    live: null,
+    github: "https://github.com/tusharmendhule/portfolio-redesigned",
+    live: "https://tusharmendhule.vercel.app/",
     category: "Frontend",
     status: "Completed",
     highlights: ["Smooth animations", "Responsive", "Fast loading", "Clean UI"],
