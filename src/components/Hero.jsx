@@ -118,43 +118,48 @@ const Hero = () => {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+             initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
-            >
-              {/* <a href="#projects" className="btn-primary">
-                View Projects <FiArrowRight />
-              </a> */}
-              <button
-                onClick={() =>
-                document.getElementById("projects").scrollIntoView({
-                behavior: "smooth",
-              })
-              }
-              className="btn-primary"
-            >
-              View Projects
-            </button>
-              {/* <a href="#contact" className="btn-ghost">
-                <FiMail /> Contact Me
-              </a> */}
-              <button
-                onClick={() =>
-                document.getElementById("contact").scrollIntoView({
-                behavior: "smooth",
-                })
-                }
-              >
-              Contact
-            </button>
-              <a
-                href="#"
-                className="btn-ghost"
-                aria-label="Download Resume"
-              >
-                <FiDownload /> Resume
-              </a>
+  className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
+>
+  {/* View Projects */}
+  <button
+    onClick={() =>
+      document.getElementById("projects")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+    className="btn-primary"
+  >
+    View Projects <FiArrowRight />
+  </button>
+
+  {/* Contact */}
+  <button
+    onClick={() =>
+      document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+    className="btn-ghost"
+  >
+    <FiMail />
+    Contact
+  </button>
+
+  {/* Resume */}
+  <a
+    href="/resume.pdf"
+    download
+    className="btn-ghost"
+    aria-label="Download Resume"
+  >
+    <FiDownload />
+    Resume
+  </a>
             </motion.div>
 
             <motion.div

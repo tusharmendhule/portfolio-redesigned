@@ -4,7 +4,7 @@ const projects = [
     description:
       "A production-ready e-commerce platform with authentication, product catalog, cart, and payment integration. Built with React, Node.js, and MongoDB.",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-    github: "https://github.com/tusharmendhule1-cell",
+    github: "https://github.com/tusharmendhule",
     live: null,
     category: "Full Stack",
     status: "In Progress",
@@ -15,7 +15,7 @@ const projects = [
     description:
       "A Kanban-style task manager with drag-and-drop, real-time updates, and team collaboration features. Clean, minimal UI with dark mode.",
     tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    github: "https://github.com/tusharmendhule1-cell",
+    github: "https://github.com/tusharmendhule",
     live: null,
     category: "Full Stack",
     status: "Completed",
@@ -26,7 +26,7 @@ const projects = [
     description:
       "My first developer portfolio — a single-page application showcasing projects, skills, and experience with smooth scroll animations.",
     tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    github: "https://github.com/tusharmendhule1-cell",
+    github: "https://github.com/tusharmendhule",
     live: null,
     category: "Frontend",
     status: "Completed",
@@ -37,7 +37,7 @@ const projects = [
     description:
       "A fully featured RESTful API for a blog platform with CRUD operations, user authentication, comments, and image uploads via Cloudinary.",
     tech: ["Node.js", "Express", "MongoDB", "JWT", "Cloudinary"],
-    github: "https://github.com/tusharmendhule1-cell",
+    github: "https://github.com/tusharmendhule",
     live: null,
     category: "Backend",
     status: "Completed",

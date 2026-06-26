@@ -191,7 +191,7 @@ const Projects = () => {
         <Reveal delay={0.2}>
           <div className="text-center mt-12">
             <a
-              href="https://github.com/tusharmendhule1-cell"
+              href="https://github.com/tusharmendhule"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost inline-flex"
