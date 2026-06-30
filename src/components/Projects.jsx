@@ -4,12 +4,12 @@ import { FaGithub } from "react-icons/fa";
 import { FiExternalLink, FiCode, FiLayers } from "react-icons/fi";
 import Reveal from "./Reveal";
 
-// Explicitly import the local project images so Vite can bundle them correctly
-import agroIntelXImg from "../assets/projects/agrointelx.jpg";
-import shpNexImg from "../assets/projects/shpnex.jpg";
-import portfolioImg from "../assets/projects/portfolio.jpg";
+// Import your asset images
+import agroIntelXImg from "../assets/projects/agrointelx.png";
+import shpNexImg from "../assets/projects/shpnex.png";
+import portfolioImg from "../assets/projects/portfolio.png";
 
-// Hardcoded production-ready project data linked to your static imports
+// Project data array
 const projects = [
   {
     title: "AgroIntelX",
@@ -111,22 +111,23 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Card header strip */}
       <div
-        className="h-1.5 w-full"
+        className="h-1.5 w-full shrink-0"
         style={{ background: "linear-gradient(90deg, #3B82F6, #8B5CF6, #06B6D4)" }}
       />
 
-      {/* Visual Image Header Section using bundled image variables */}
+      {/* New visual feature: Image banner injected right under the color band */}
       {project.image && (
-        <div className="w-full h-44 overflow-hidden relative border-b border-white/5 bg-neutral-900/40">
+        <div className="w-full h-48 overflow-hidden relative border-b border-white/5 bg-neutral-900/40 shrink-0">
           <img 
             src={project.image} 
-            alt={`${project.title} Interface Preview`}
+            alt={`${project.title} Preview`}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             loading="lazy"
           />
         </div>
       )}
 
+      {/* Main card content box */}
       <div className="p-6 flex flex-col flex-1">
         {/* Top row */}
         <div className="flex items-start justify-between gap-3 mb-4">
