@@ -14,7 +14,7 @@ const projects = [
   {
     title: "AgroIntelX",
     category: "Full Stack",
-    status: "In Progress",
+    status: "completed",
     description:
       "AI-powered precision agriculture platform that provides crop disease detection, crop recommendation, fertilizer recommendation, weather forecasting, soil analysis, multilingual AI assistant, analytics dashboard, and farmer decision support.",
     tech: [
